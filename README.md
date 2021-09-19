@@ -33,3 +33,10 @@ We will all be at every meeting unless there is extenuating circumstances where 
 --Breach of Contract
 
 I think it is understood between all of this if someone messes up it reflects on their grade so that is an infraction in its self and we will be using peer evaluation.
+
+
+
+The paragraphs below detail our personal responsibilities for this project and are our signatures for the project.
+
+Connor
+I will be taking the lead on our client communication and team organization so I will be organizing our meetings, writing user stories, and putting together what everyone should be doing. The rest of my time I will just hop into whatever needs worked on help wherever I can. I will contribute to a positive group environment by being willing to make compromises with my teammates and to help them anytime they need it because I know they will do the same. If a conflict arises I think I will be able to step forward and talk about and bring about a way to resolve it that can hopefully please both parties.
