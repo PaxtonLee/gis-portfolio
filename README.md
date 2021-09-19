@@ -40,3 +40,6 @@ The paragraphs below detail our personal responsibilities for this project and a
 
 Connor
 I will be taking the lead on our client communication and team organization so I will be organizing our meetings, writing user stories, and putting together what everyone should be doing. The rest of my time I will just hop into whatever needs worked on help wherever I can. I will contribute to a positive group environment by being willing to make compromises with my teammates and to help them anytime they need it because I know they will do the same. If a conflict arises I think I will be able to step forward and talk about and bring about a way to resolve it that can hopefully please both parties.
+
+Caleb 
+I will be focusing my efforts around the majority of the backend work. This does not set me exclusive to this category, but it will be my area of focus throughout the semester. I also plan to assist any group members in their own efforts if it is needed. I commit to help foster and produce a positive working environment among the team. I also commit to ensuring a high level of quality for the product we are going to deliver to the client. 
