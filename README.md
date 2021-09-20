@@ -46,3 +46,6 @@ I will be focusing my efforts around the majority of the backend work. This does
 
 Paxton
 My top focus will be helping the frontend and backend code work cohesively. Due to this sort of in-between role, I will be mainly working with Caleb and Ethan - splitting my workload as necessary between frontend (HTML, CSS, etc.) and backend (JavaScript, Ruby). In addition to this, I will be available to assist any group member with any other aspect of the project that they need help with. By writing this section of the file, I commit to each of the duties listed above, and to doing whatever I can to ensure that the group works together seamlessly and can produce the product that Dr. Hill wants.
+
+Ethan
+My main priority will be the front end code (HTML, CSS, MD etc.), though I will not be confined strictly to this assignment as I am able to help wherever assistance is needed. I will be working with mainly Connor, to understand the work to be done, and Paxton while actually writing the code. I will out forth my best effort to contribute to a positive work environment and make myself as available as possible to assist my teammates in any way they may need. By writing this section I commit to each of the items listed above, and to doing whatever I can to ensure that the group  works together seamlessly so that we can produce the product that Dr. Hill commissioned.
