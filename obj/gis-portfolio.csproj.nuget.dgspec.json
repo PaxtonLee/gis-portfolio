@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Caleb\\Source\\Repos\\gis-portfolio\\gis-portfolio.csproj": {}
+    "C:\\Users\\Caleb\\source\\repos\\gis-portfolio\\gis-portfolio.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Caleb\\Source\\Repos\\gis-portfolio\\gis-portfolio.csproj": {
+    "C:\\Users\\Caleb\\source\\repos\\gis-portfolio\\gis-portfolio.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Caleb\\Source\\Repos\\gis-portfolio\\gis-portfolio.csproj",
+        "projectUniqueName": "C:\\Users\\Caleb\\source\\repos\\gis-portfolio\\gis-portfolio.csproj",
         "projectName": "gis-portfolio",
-        "projectPath": "C:\\Users\\Caleb\\Source\\Repos\\gis-portfolio\\gis-portfolio.csproj",
+        "projectPath": "C:\\Users\\Caleb\\source\\repos\\gis-portfolio\\gis-portfolio.csproj",
         "packagesPath": "C:\\Users\\Caleb\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Caleb\\Source\\Repos\\gis-portfolio\\obj\\",
+        "outputPath": "C:\\Users\\Caleb\\source\\repos\\gis-portfolio\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"

@@ -1,8 +1,6 @@
 # gis-portfolio
 Our final project for Databases and Web Systems
 
-Hello ethan 
-
 - Connor Escajeda, escajedacj@hendrix.edu, 4795316470
 - Caleb Williams, williamscj@hendrix.edu, 4792875616
 - Ethan Thomas, thomasem@hendrix.edu, 9403957664
