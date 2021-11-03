@@ -1,10 +1,10 @@
 # gis-portfolio
 Our final project for Databases and Web Systems
 
-- Connor Escajeda, escajedacj@hendrix.edu, 4795316470
-- Caleb Williams, williamscj@hendrix.edu, 4792875616
-- Ethan Thomas, thomasem@hendrix.edu, 9403957664
-- Paxton Higgerson, higgersonpl@hendrix.edu, 6183187194
+- Connor Escajeda, escajedacj@hendrix.edu
+- Caleb Williams, williamscj@hendrix.edu
+- Ethan Thomas, thomasem@hendrix.edu
+- Paxton Higgerson, higgersonpl@hendrix.edu
 
 Since we will have unanimous decision making policy we are going to be taking a shared approach to leadership where everyone is able to have equal say in what happens.
 
