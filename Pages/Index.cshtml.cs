@@ -11,15 +11,25 @@ namespace gis_portfolio.Pages
     public class IndexModel : PageModel
     {
         private readonly ILogger<IndexModel> _logger;
+        public Sort sort{ get; set; }
 
         public IndexModel(ILogger<IndexModel> logger)
         {
-            _logger = logger;
         }
 
         public void OnGet()
         {
 
-        }
+        
+    }}
+        
+    public enum Sort
+    {
+        AZ,
+        ZA,
+        Date,
+        Category
+
+
     }
 }

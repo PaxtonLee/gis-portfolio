@@ -3,8 +3,23 @@
 @{
     ViewData["Title"] = "Home page";
 }
+<style>
+    .text-left {
+        background-color: rgb(245,130,42);
+    }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    
+</style>
+
+<div class="text-left">
+    <h1 class="display-4">Hendrix GIS Portfolio</h1>
+    <p> Connor, Paxton, Caleb, Ethan</p>
 </div>
+
+@*This is the drop down box, not sure how to make smaller or put in a specific spot yet, CE*@
+
+@Html.DropDownList("Sort by",
+                    new SelectList(Enum.GetValues(typeof(Sort))),
+                    "Sort By",
+                    new { @class = "form-control", style = "width: 190px;" })
+
