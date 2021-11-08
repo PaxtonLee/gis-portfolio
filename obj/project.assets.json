@@ -6720,19 +6720,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\conno\\.nuget\\packages\\": {}
+    "C:\\Users\\ethan\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Coding Stuff\\csci340\\gis-portfolio\\gis-portfolio.csproj",
+      "projectUniqueName": "C:\\Users\\ethan\\Source\\Repos\\gis-portfolio\\gis-portfolio.csproj",
       "projectName": "gis-portfolio",
-      "projectPath": "C:\\Coding Stuff\\csci340\\gis-portfolio\\gis-portfolio.csproj",
-      "packagesPath": "C:\\Users\\conno\\.nuget\\packages\\",
-      "outputPath": "C:\\Coding Stuff\\csci340\\gis-portfolio\\obj\\",
+      "projectPath": "C:\\Users\\ethan\\Source\\Repos\\gis-portfolio\\gis-portfolio.csproj",
+      "packagesPath": "C:\\Users\\ethan\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\ethan\\Source\\Repos\\gis-portfolio\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\conno\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\ethan\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
