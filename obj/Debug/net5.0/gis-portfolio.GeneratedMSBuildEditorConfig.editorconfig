@@ -7,4 +7,4 @@ build_property.PublishSingleFile =
 build_property.IncludeAllContentForSelfExtract = 
 build_property._SupportedPlatformList = Android,iOS,Linux,macOS,Windows
 build_property.RootNamespace = gis_portfolio
-build_property.ProjectDir = C:\Coding Stuff\csci340\gis-portfolio\
+build_property.ProjectDir = C:\Users\ethan\Source\Repos\gis-portfolio\
