@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using gis_portfolio.Models;
 
 namespace gis_portfolio.Pages
 {
@@ -21,15 +22,15 @@ namespace gis_portfolio.Pages
         {
 
         
-    }}
-        
+    }
+    }
+
     public enum Sort
     {
         AZ,
         ZA,
         Date,
         Category
-
 
     }
 }
