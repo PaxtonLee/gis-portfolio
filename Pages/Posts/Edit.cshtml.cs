@@ -66,7 +66,7 @@ namespace gis_portfolio.Pages.Posts
                 }
             }
 
-            return RedirectToPage("./Index");
+            return RedirectToPage("/Index");
         }
 
         private bool PostExists(int id)

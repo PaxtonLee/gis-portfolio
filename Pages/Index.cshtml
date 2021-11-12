@@ -7,7 +7,16 @@
     .text-left {
         background-color: rgb(245,130,42);
     }
-    
+   /*#author:visited  {
+        color: black;
+        background-color: transparent;
+        text-decoration: none;
+    }*/
+    .links {
+        color: black;
+        background-color: transparent;
+        text-decoration: none;
+    }
     
     
 </style>
@@ -18,9 +27,6 @@
     <p> Connor, Paxton, Caleb, Ethan</p>
 </div>
 
-<div>
-    <p>Test</p>
-</div>
 @*This is the drop down box, not sure how to make smaller or put in a specific spot yet, CE*@
 
 @Html.DropDownList("Sort by",
@@ -62,13 +68,14 @@
                     @Html.DisplayFor(modelItem => item.date)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.author)
+                    <a class="links" href="/Profile">@Html.DisplayFor(modelItem => item.author)</a>
+                    
                 </td>
              
                 <td>
-                    <a asp-page="./Edit" asp-route-id="@item.ID">Edit</a> |
-                    <a asp-page="./Details" asp-route-id="@item.ID">Details</a> |
-                    <a asp-page="./Delete" asp-route-id="@item.ID">Delete</a>
+                    <a class="links" asp-page="Posts/Edit" asp-route-id="@item.ID">Edit</a> |
+                    <a class="links" asp-page="Posts/Details" asp-route-id="@item.ID">Details</a> |
+                    <a class="links" asp-page="Posts/Delete" asp-route-id="@item.ID">Delete</a>
                 </td>
             </tr>
         }
