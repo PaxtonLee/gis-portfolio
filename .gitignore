@@ -3,6 +3,16 @@
 ##
 ## Get latest from https://github.com/github/gitignore/blob/master/VisualStudio.gitignore
 
+#Caleb Added the following to ignore the temp files hopefully
+.suo
+gis-portfolio.assets.cache
+gis-portfolio.csproj.AssemblyReference.cache
+gisportfolio.GeneratedMSBuildEditorConfig.editorconfig
+gis-portfolio.csproj.nuget.dgspec.json
+gis-portfolio.csproj.nuget.g.props
+project.assets.json
+project.nuget.cache
+
 # User-specific files
 *.rsuser
 *.suo
