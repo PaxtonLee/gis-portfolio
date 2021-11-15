@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿@page
 @model gis_portfolio.Pages.Posts.IndexModel
 @{
@@ -97,3 +98,91 @@
 
 
 
+=======
+﻿@page
+@model gis_portfolio.Pages.Posts.IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+<style>
+    .text-left {
+        background-color: rgb(245,130,42);
+    }
+   /*#author:visited  {
+        color: black;
+        background-color: transparent;
+        text-decoration: none;
+    }*/
+    .links {
+        color: black;
+        background-color: transparent;
+        text-decoration: none;
+    }
+    
+    
+</style>
+
+
+<div class="text-left">
+    <h1 class="display-4">Hendrix GIS Portfolio</h1>
+    <p> Connor, Paxton, Caleb, Ethan</p>
+</div>
+
+@*This is the drop down box, not sure how to make smaller or put in a specific spot yet, CE*@
+
+@Html.DropDownList("Sort by",
+                    new SelectList(Enum.GetValues(typeof(Sort))),
+                    "Sort By",
+                    new { @class = "form-control", style = "width: 190px;" })
+
+
+@*need to figure out somethings with displaying this on the main page and stuff*@
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Post[0].Title)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Post[0].short_desc)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Post[0].date)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Post[0].author)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Post)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Title)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.short_desc)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.date)
+                </td>
+                <td>
+                    <a class="links" href="/Profile">@Html.DisplayFor(modelItem => item.author)</a>
+                    
+                </td>
+             
+                <td>
+                    <a class="links" asp-page="Posts/Edit" asp-route-id="@item.ID">Edit</a> |
+                    <a class="links" asp-page="Posts/Details" asp-route-id="@item.ID">Details</a> |
+                    <a class="links" asp-page="Posts/Delete" asp-route-id="@item.ID">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+ 
+
+>>>>>>> main
