@@ -657,3 +657,9 @@ __pycache__/
 
 # dependencies
 node_modules/
+obj/Debug/net5.0/gis-portfolio.assets.cache
+obj/Debug/net5.0/gis-portfolio.assets.cache
+obj/Debug/net5.0/gis-portfolio.csproj.AssemblyReference.cache
+obj/Debug/net5.0/gis-portfolio.assets.cache
+obj/Debug/net5.0/gis-portfolio.csproj.AssemblyReference.cache
+obj/Debug/net5.0/gis-portfolio.GeneratedMSBuildEditorConfig.editorconfig
