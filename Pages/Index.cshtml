@@ -4,29 +4,50 @@
     ViewData["Title"] = "Home page";
 }
 <style>
-    .text-left {
-        background-color: rgb(245,130,42);
+    .carousel-inner {
+        height: 300px;
+        width: stretch;
+        background-color: darkorange;
     }
-    
-    
-    
 </style>
 
-
-<div class="text-left">
-    <h1 class="display-4">Hendrix GIS Portfolio</h1>
-    <p> Connor, Paxton, Caleb, Ethan</p>
+<!-- https://getbootstrap.com/docs/4.2/components/carousel/ -->
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="~/css/Resources/forest.jpg" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+            <img src="~/css/Resources/moon.jpg" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+            <img src="~/css/Resources/road.jpg" class="d-block w-100" alt="...">
+        </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
 </div>
 
-<div>
-    <p>Test</p>
-</div>
+
 @*This is the drop down box, not sure how to make smaller or put in a specific spot yet, CE*@
 
 @Html.DropDownList("Sort by",
-                    new SelectList(Enum.GetValues(typeof(Sort))),
-                    "Sort By",
-                    new { @class = "form-control", style = "width: 190px;" })
+                        new SelectList(Enum.GetValues(typeof(Sort))),
+                        "Sort By",
+                        new { @class = "form-control", style = "width: 190px;" })
+
+
 
 
 @*need to figure out somethings with displaying this on the main page and stuff*@
@@ -45,35 +66,41 @@
             <th>
                 @Html.DisplayNameFor(model => model.Post[0].author)
             </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Post[0].photo)
+            </th>
             <th></th>
         </tr>
     </thead>
     <tbody>
         @foreach (var item in Model.Post)
         {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Title)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.short_desc)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.date)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.author)
-                </td>
-             
-                <td>
-                    <a asp-page="./Edit" asp-route-id="@item.ID">Edit</a> |
-                    <a asp-page="./Details" asp-route-id="@item.ID">Details</a> |
-                    <a asp-page="./Delete" asp-route-id="@item.ID">Delete</a>
-                </td>
-            </tr>
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.short_desc)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.date)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.author)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.photo)
+            </td>
+
+            <td>
+                <a asp-page="./Posts/Edit" asp-route-id="@item.ID">Edit</a> |
+                <a asp-page="./Posts/Details" asp-route-id="@item.ID">Details</a> |
+                <a asp-page="./Posts/Delete" asp-route-id="@item.ID">Delete</a>
+            </td>
+        </tr>
         }
     </tbody>
 </table>
 
- 
+
 

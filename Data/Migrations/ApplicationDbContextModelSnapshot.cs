@@ -38,6 +38,9 @@ namespace gis_portfolio.Data.Migrations
                     b.Property<string>("long_desc")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("photo")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("short_desc")
                         .HasColumnType("nvarchar(max)");
 
