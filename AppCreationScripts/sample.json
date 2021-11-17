@@ -39,7 +39,7 @@
     {
       "App": "webApp",
       "SettingKind": "JSon",
-      "SettingFile": "\\..\\active-directory-aspnetcore-webapp-openidconnect-v2\\appsettings.json",
+      "SettingFile": "\\..\\gis-portfolio\\appsettings.json",
       "Mappings": [
         {
           "key": "ClientId",
