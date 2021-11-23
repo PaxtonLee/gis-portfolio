@@ -172,7 +172,7 @@ Write(Html.DropDownList("Sort by",
             WriteLiteral("\r\n\r\n\r\n\r\n\r\n");
             WriteLiteral("<table class=\"table\">\r\n    <thead>\r\n        <tr>\r\n            <th>\r\n                ");
 #nullable restore
-#line 58 "C:\Users\ethan\Source\Repos\gis-portfolio\Pages\Index.cshtml"
+#line 32 "C:\Coding stuff\CSCI 340-Databases\gis-portfolio\Pages\Index.cshtml"
            Write(Html.DisplayNameFor(model => model.Post[0].Title));
 
 #line default
@@ -180,7 +180,7 @@ Write(Html.DropDownList("Sort by",
 #nullable disable
             WriteLiteral("\r\n            </th>\r\n            <th>\r\n                ");
 #nullable restore
-#line 61 "C:\Users\ethan\Source\Repos\gis-portfolio\Pages\Index.cshtml"
+#line 35 "C:\Coding stuff\CSCI 340-Databases\gis-portfolio\Pages\Index.cshtml"
            Write(Html.DisplayNameFor(model => model.Post[0].short_desc));
 
 #line default
@@ -188,7 +188,7 @@ Write(Html.DropDownList("Sort by",
 #nullable disable
             WriteLiteral("\r\n            </th>\r\n            <th>\r\n                ");
 #nullable restore
-#line 64 "C:\Users\ethan\Source\Repos\gis-portfolio\Pages\Index.cshtml"
+#line 38 "C:\Coding stuff\CSCI 340-Databases\gis-portfolio\Pages\Index.cshtml"
            Write(Html.DisplayNameFor(model => model.Post[0].date));
 
 #line default
