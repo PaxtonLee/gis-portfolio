@@ -53,7 +53,7 @@ namespace gis_portfolio.Pages.Posts
                 await _context.SaveChangesAsync();
             }
 
-            return RedirectToPage("./Index");
+            return RedirectToPage("/Index");
         }
     }
 }
