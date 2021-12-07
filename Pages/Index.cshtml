@@ -66,10 +66,10 @@
             <th>
                 @Html.DisplayNameFor(model => model.Post[0].author)
             </th>
+            
             <th>
                 @Html.DisplayNameFor(model => model.Post[0].photo)
             </th>
-            <th></th>
         </tr>
     </thead>
     <tbody>
@@ -96,6 +96,7 @@
                 <a asp-page="./Posts/Edit" asp-route-id="@item.ID">Edit</a> |
                 <a asp-page="./Posts/Details" asp-route-id="@item.ID">Details</a> |
                 <a asp-page="./Posts/Delete" asp-route-id="@item.ID">Delete</a>
+                
             </td>
         </tr>
         }
