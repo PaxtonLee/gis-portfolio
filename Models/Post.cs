@@ -19,6 +19,8 @@ namespace gis_portfolio.Models
         [Display(Name = "Author")]
         public string author { get; set; }
         public string long_desc { get; set; }
+        public string photo { get; set; }
+        
 
     }
 }
