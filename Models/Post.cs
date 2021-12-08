@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -21,6 +22,7 @@ namespace gis_portfolio.Models
         public string long_desc { get; set; }
         public string photo { get; set; }
         
+
 
     }
 }

@@ -4,6 +4,9 @@
 ## Get latest from https://github.com/github/gitignore/blob/master/VisualStudio.gitignore
 
 #Caleb Added the following to ignore the temp files hopefully
+/.vs
+/obj
+/bin
 .suo
 gis-portfolio.assets.cache
 gis-portfolio.csproj.AssemblyReference.cache
