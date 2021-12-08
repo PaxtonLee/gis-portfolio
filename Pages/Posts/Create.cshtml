@@ -5,10 +5,13 @@
     ViewData["Title"] = "Create";
 }
 <style>
-    #boxLong {
+    #boxLong{
         width: 1000px;
         height: 250px;
     }
+
+
+
 </style>
 <h1>Create a Project</h1>
 
@@ -40,7 +43,7 @@
             </div>
             <div class="form-group" id="longDesc">
                 <label asp-for="Post.long_desc" class="control-label"></label>
-                <input asp-for="Post.long_desc" class="form-control" id="boxLong" />
+                <input asp-for="Post.long_desc" class="form-control" id="boxLong"/>
                 <span asp-validation-for="Post.long_desc" class="text-danger"></span>
             </div>
             <div class="form-group">

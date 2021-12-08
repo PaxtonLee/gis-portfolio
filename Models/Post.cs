@@ -21,6 +21,7 @@ namespace gis_portfolio.Models
         public string author { get; set; }
         public string long_desc { get; set; }
         public string photo { get; set; }
+        
 
 
     }
