@@ -59,6 +59,7 @@ namespace gis_portfolio
                 options.Filters.Add(new AuthorizeFilter(policy));
             }).AddMicrosoftIdentityUI();
 
+            services.AddRazorPages();
             /*
              * End Init Microsoft Auth
              */
@@ -69,9 +70,9 @@ namespace gis_portfolio
             services.AddDatabaseDeveloperPageExceptionFilter();
 
             // Unsure if adding default identity will cause issues with the Microsoft Auth process. Remove below if issues are thrown
-            services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
-                .AddEntityFrameworkStores<gis_portfolioContext>();
-            services.AddRazorPages();
+            //services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
+            //    .AddEntityFrameworkStores<gis_portfolioContext>();
+            //services.AddRazorPages();
 
             services.AddDbContext<gis_portfolioContext>(options =>
                     options.UseSqlServer(Configuration.GetConnectionString("gis_portfolioContext")));
