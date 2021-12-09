@@ -91,13 +91,17 @@
             <td>
                 @Html.DisplayFor(modelItem => item.photo)
             </td>
-
             <td>
-                <a asp-page="./Posts/Edit" asp-route-id="@item.ID">Edit</a> |
-                <a asp-page="./Posts/Details" asp-route-id="@item.ID">Details</a> |
-                <a asp-page="./Posts/Delete" asp-route-id="@item.ID">Delete</a>
-                
+                <a asp-page="./Details" asp-route-id="@item.ID">Details</a>
             </td>
+            @* TODO need to make sure we take the users 'User.Identity.Name' and assign that to the database entry author *@
+            @if (User.Identity.Name == item.author)
+            {
+                <td>
+                    |<a asp-page="./Edit" asp-route-id="@item.ID">Edit</a> |
+                    <a asp-page="./Delete" asp-route-id="@item.ID">Delete</a>
+                </td>
+            }
         </tr>
         }
     </tbody>
