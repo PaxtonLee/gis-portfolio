@@ -8,10 +8,11 @@
     <link rel="stylesheet" href="~/css/site.css" />
 </head>
 <body>
+ 
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light border-bottom box-shadow mb-3">
             <div class="container">
-                <a class="navbar-brand" asp-area="" asp-page="/Index">Hendrix GIS Portfolio</a>
+                <a class="navbar-brand" asp-area="" asp-page="/Index">Mapping the 21st Century with Hendrix Students</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -36,6 +37,18 @@
     </header>
     <div class="container">
         <main role="main" class="pb-3">
+            <div class="logo-container">
+                <a href="/">
+                    <img src="/css/Resources/hendrixLogo_bob.jpg" class="logo" alt="Hendrix College Logo" />
+                </a>
+            </div>
+            <div class="mission">
+                <p class="words"><em>A showcase for Hendrix students to highlight their work with Geographic Information Systems (GIS) and to share these datasets.</em></p>
+                <p class="words" id="line2"><em>We emphasize work in Anthropology and Environmental Studies, focusing especially on questions of environmental justice.</em> </p>
+                <p class="words" id="line3"> <em>The entries here are authored by students and are based on work that they have done in their undergraduate studies at Hendrix.</em></p>
+                <p class="words" id="line4"><em>Each one offers a brief description of their work, with maps and links to GIS datasets they want to share with colleagues around world.</em></p>
+            </div>
+
             @RenderBody()
         </main>
     </div>
@@ -46,6 +59,7 @@
         </div>
     </footer>
 
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css">
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
@@ -54,7 +68,92 @@
 </body>
 </html>
 <style>
-    .navbar {
-        background-color: darkorange;
+
+    .navbar navbar-expand-sm navbar-toggleable-sm navbar-light border-bottom box-shadow mb-3 {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 0;
+        border-top-left-radius: 0;
+        in-height: inherit;
+        margin-bottom: 0;
+        position: relative;
+        width: 80%;
+        height: 50%;
     }
+
+    .container {
+        max-width: 2250px
+    }
+
+    .logo-container {
+        margin: 16px 0px 16px;
+        width: 40%;
+        float: left;
+    }
+
+    .mission {
+        width: 60%;
+        text-align: left;
+        float: right;
+        font-family: "Merriweather Sans", Arial, sans-serif;
+        display: inline-block
+    }
+    @@media only screen and (max-width : 1280px){
+            .mission{
+                display: none
+            }
+    }
+    .words {
+        font-size: .80vw;
+        word-wrap: break-word;
+    }
+
+    #line2 {
+        text-indent: 45px;
+    }
+
+    #line3 {
+        text-indent: 90px;
+    }
+
+    #line4 {
+        text-indent: 135px;
+    }
+
+    .logo {
+        max-width: 500px
+    }
+
+    .navbar {
+        background-color: #CB4F0C;
+    }
+
+    a.navbar-brand {
+        background-color: #CB4F0C;
+        font-family: "Merriweather Sans", Arial, sans-serif;
+        font-weight: 700;
+    }
+
+    .navbar-light .navbar-brand {
+        color: #ffffff;
+        left: 30px;
+    }
+
+    .nav-item {
+        color: #ffffff;
+        font-family: "Merriweather Sans", Arial, sans-serif;
+        font-weight: 700;
+        position: relative;
+        display: block;
+    }
+
+    .text-dark {
+        color: white !important;
+    }
+
+
 </style>
+
+<script>
+
+</script>

@@ -17,12 +17,12 @@ namespace gis_portfolio.Pages
         public IndexModel(ILogger<IndexModel> logger)
         {
         }
-
+        
         public void OnGet()
         {
 
         
-    }
+        }
     }
 
     public enum Sort
@@ -33,4 +33,5 @@ namespace gis_portfolio.Pages
         Category
 
     }
+
 }
