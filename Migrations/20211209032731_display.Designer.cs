@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using gis_portfolio.Data;
 
 namespace gis_portfolio.Migrations
 {
     [DbContext(typeof(gis_portfolioContext))]
-    partial class gis_portfolioContextModelSnapshot : ModelSnapshot
+    [Migration("20211209032731_display")]
+    partial class display
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
