@@ -10,7 +10,7 @@
 <h4>Post</h4>
 <hr />
 <div class="row">
-    <div class="col-md-4">
+    <div class="col-md-12">
         <form method="post">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="Post.ID" />
@@ -18,11 +18,6 @@
                 <label asp-for="Post.Title" class="control-label"></label>
                 <input asp-for="Post.Title" class="form-control" />
                 <span asp-validation-for="Post.Title" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Post.short_desc" class="control-label"></label>
-                <input asp-for="Post.short_desc" class="form-control" />
-                <span asp-validation-for="Post.short_desc" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Post.date" class="control-label"></label>
@@ -34,10 +29,20 @@
                 <input asp-for="Post.display_name" class="form-control" />
                 <span asp-validation-for="Post.display_name" class="text-danger"></span>
             </div>
-            <div class="form-group">
+            <div class="form-group" id="longDesc">
                 <label asp-for="Post.long_desc" class="control-label"></label>
-                <input asp-for="Post.long_desc" class="form-control" />
+                <textarea rows="2" cols="25" asp-for="Post.long_desc" class="form-control" id="boxLong"></textarea>
                 <span asp-validation-for="Post.long_desc" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Post.photo" class="control-label"></label>
+                <input asp-for="Post.photo" class="form-control" readonly/>
+                <span asp-validation-for="Post.photo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Post.display_name" class="control-label"></label>
+                <input asp-for="Post.display_name" class="form-control" readonly/>
+                <span asp-validation-for="Post.display_name" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-primary" />
@@ -49,6 +54,20 @@
 <div>
     <a asp-page="/Index">Back to List</a>
 </div>
+<style>
+    .form-group {
+        width: 30%;
+    }
+
+    #longDesc {
+        width: 100%
+    }
+
+    #boxLong {
+        width: 100%;
+        height: 600px;
+    }
+</style>
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
