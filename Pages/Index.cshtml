@@ -36,79 +36,29 @@
 
 @*This is the drop down box, not sure how to make smaller or put in a specific spot yet, CE*@
 
-@Html.DropDownList("Sort by",
+@*@Html.DropDownList("Sort by",
                         new SelectList(Enum.GetValues(typeof(Sort))),
                         "Sort By",
-                        new { @class = "form-control", style = "width: 190px;" })
+                        new { @class = "form-control", style = "width: 190px;" })*@
 
-@foreach (var item in Model.Post)
-{
-<tr>
-    <td>
-        <a href="/Posts/Details?id=7">
-            <img class="post" src=@Url.Content(item.photo) alt="test" />
-        </a>
-    </td>
-    <td>
-        @Html.DisplayName(item.Title)
-    </td>
-    <td>
-        @Html.DisplayName(item.author)
-    </td>
-</tr>
-}
+<ul id="content">
+    @foreach (var item in Model.Post)
+    {
+        int id = item.ID;
+        <li class="post">
+            <a href="/Posts/Details?id=@id"  class="pic-link">
+                    <img class="post-img" src=@Url.Content(item.photo) alt="test" /> 
+            </a>
+            <a class="post-title" href="/Posts/Details?id=7" title="@Html.DisplayName(item.Title)"> @Html.DisplayName(item.Title)</a>
+            <p class="author">@Html.DisplayName(item.author)</p> 
+             
+        </li>
+    }
+</ul>
+       
+ 
 
 
-@*need to figure out somethings with displaying this on the main page and stuff*@
-@*<table class="table">
-        <thead>
-            <tr>
-                <th>
-                    @Html.DisplayNameFor(model => model.Post[0].Title)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Post[0].short_desc)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Post[0].date)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Post[0].author)
-                </th>
-
-                <th>
-                    @Html.DisplayNameFor(model => model.Post[0].photo)
-                </th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Title)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.short_desc)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.date)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.author)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.photo)
-                </td>
-
-                <td>
-                    <a asp-page="./Posts/Edit" asp-route-id="@item.ID">Edit</a> |
-                    <a asp-page="./Posts/Details" asp-route-id="@item.ID">Details</a> |
-                    <a asp-page="./Posts/Delete" asp-route-id="@item.ID">Delete</a>
-
-                </td>
-            </tr>
-            }
-        </tbody>
-    </table>*@
 
 <style>
     .carousel-inner {
@@ -122,11 +72,41 @@
         height: 300px;
     }
 
-    .post {
-        margin: 10px 5px 10px;
+    .post-img {
+        margin: 10px 1px 10px;
         height: 150px;
         width: 250px;
     }
+    .post {
+        border: 0 solid black;
+        display: inline-block;
+        float: left;
+        height: 250px;
+        margin: 8px;
+        overflow: hidden;
+        position: relative;
+        width: 286px;
+    }
+    .post-title {
+        display: block;
+        padding-top: 5px;
+        text-align: left;
+        width: 286px;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+    .author{
+        white-space: nowrap
+    }
+    .content {
+        font-size: 0.875em;
+        line-height: 1.71429em;
+        margin-bottom: 1.5em;
+        list-style-position: inside;
+        margin-top: 0;
+        padding: 0;
+    }
+
 </style>
 
 
