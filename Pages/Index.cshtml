@@ -40,14 +40,13 @@
 </div>
 
 
+
 @*This is the drop down box, not sure how to make smaller or put in a specific spot yet, CE*@
 
 @Html.DropDownList("Sort by",
-                        new SelectList(Enum.GetValues(typeof(Sort))),
-                        "Sort By",
-                        new { @class = "form-control", style = "width: 190px;" })
-
-
+                    new SelectList(Enum.GetValues(typeof(Sort))),
+                    "Sort By",
+                    new { @class = "form-control", style = "width: 190px;" })
 
 
 @*need to figure out somethings with displaying this on the main page and stuff*@
@@ -66,39 +65,32 @@
             <th>
                 @Html.DisplayNameFor(model => model.Post[0].author)
             </th>
-            
-            <th>
-                @Html.DisplayNameFor(model => model.Post[0].photo)
-            </th>
+            <th></th>
         </tr>
     </thead>
     <tbody>
         @foreach (var item in Model.Post)
         {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Title)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.short_desc)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.date)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.author)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.photo)
-            </td>
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Title)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.short_desc)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.date)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.author)
+                </td>
 
-            <td>
-                <a asp-page="./Posts/Edit" asp-route-id="@item.ID">Edit</a> |
-                <a asp-page="./Posts/Details" asp-route-id="@item.ID">Details</a> |
-                <a asp-page="./Posts/Delete" asp-route-id="@item.ID">Delete</a>
-                
-            </td>
-        </tr>
+                <td>
+                    <a asp-page="./Posts/Edit" asp-route-id="@item.ID">Edit</a> |
+                    <a asp-page="./Posts/Details" asp-route-id="@item.ID">Details</a> |
+                    <a asp-page="./Posts/Delete" asp-route-id="@item.ID">Delete</a>
+                </td>
+            </tr>
         }
     </tbody>
 </table>

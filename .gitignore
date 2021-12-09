@@ -4,9 +4,6 @@
 ## Get latest from https://github.com/github/gitignore/blob/master/VisualStudio.gitignore
 
 #Caleb Added the following to ignore the temp files hopefully
-/.vs
-/obj
-/bin
 .suo
 gis-portfolio.assets.cache
 gis-portfolio.csproj.AssemblyReference.cache
@@ -400,10 +397,31 @@ FodyWeavers.xsd
 .idea/
 *.sln.iml
 
-bin/Debug/net5.0/
+# CodeRush
+.cr/
 
-obj/Debug/net5.0/
+# Python Tools for Visual Studio (PTVS)
+__pycache__/
+*.pyc
 
-Data/Migrations/
+# Cake - Uncomment if you are using it
+# tools/**
+# !tools/packages.config
 
-obj/Release/net5.0/
+# Telerik's JustMock configuration file
+*.jmconfig
+
+# BizTalk build output
+*.btp.cs
+*.btm.cs
+*.odx.cs
+*.xsd.cs
+
+# dependencies
+node_modules/
+obj/Debug/net5.0/gis-portfolio.assets.cache
+obj/Debug/net5.0/gis-portfolio.assets.cache
+obj/Debug/net5.0/gis-portfolio.csproj.AssemblyReference.cache
+obj/Debug/net5.0/gis-portfolio.assets.cache
+obj/Debug/net5.0/gis-portfolio.csproj.AssemblyReference.cache
+obj/Debug/net5.0/gis-portfolio.GeneratedMSBuildEditorConfig.editorconfig

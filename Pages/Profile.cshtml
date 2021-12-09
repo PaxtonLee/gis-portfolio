@@ -4,48 +4,25 @@
     ViewData["Title"] = "Profile Page";
 }
 <style>
-    .col-md-6 {
+    .mainBanner{
         background-color: rgb(245,130,42);
     }
 
-    .avatar {
-        /*vertical-align: middle;*/
-        width: 100px;
-        height: 100px;
-        border-radius: 50%;
-    }
-
-    #pic {
+    .profilePic{
         text-align: right;
     }
-
-    .row{
-        outline-color: black;
-        outline-style: inset;
-        outline-width: thin;
-    }
-    
 </style>
 
 <!-- <h1>@ViewData["Title"]</h1> -->
-<div class="row">
-    <div class="col-sm-6">
-        <h1 class="col-sm-4">Profile</h1>
-        <p class="col-sm-4">Name of Person</p>
-    </div>
-    <div id="pic" class="col-sm-6">
-        <img id="profpic" class="avatar" src="~/css/Resources/road.jpg" />
-    </div>
+
+<div class="mainBanner">
+    <h1 class="display-4">Profile</h1>
+    <img class="profilePic" src=""/>
+    <p>Authors</p>
 </div>
 
-<div id="projTable "class="container">
-    <h4>Projects</h4>
-    <p>Connor pls add a table of posts per author here</p>
+<h2>Projects</h2>
+<div class="container">
+    <p>put table of posts by author here pls Connor</p>
+
 </div>
-    
-
-
-
-
-
-
