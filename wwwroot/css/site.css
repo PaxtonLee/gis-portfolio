@@ -2,13 +2,13 @@
 for details on configuring this project to bundle and minify static web assets. */
 
 a.navbar-brand {
-  white-space: normal;
-  text-align: center;
-  word-break: break-all;
-  background-color: darkorange;
+    white-space: normal;
+    text-align: center;
+    word-break: break-all;
+    background-color: #CB4F0C;
 }
-header{
-    background-color: darkorange;
+header {
+    background-color: #CB4F0C;
 }
 
 /* Provide sufficient contrast against white background */
@@ -73,3 +73,8 @@ body {
   white-space: nowrap;
   line-height: 60px; /* Vertically center the text there */
 }
+
+/* Gis styles
+    ------------------------*/
+
+

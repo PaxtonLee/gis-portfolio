@@ -3,13 +3,7 @@
 @{
     ViewData["Title"] = "Home page";
 }
-<style>
-    .carousel-inner {
-        height: 300px;
-        width: stretch;
-        background-color: darkorange;
-    }
-</style>
+
 
 <!-- https://getbootstrap.com/docs/4.2/components/carousel/ -->
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
@@ -20,13 +14,13 @@
     </ol>
     <div class="carousel-inner">
         <div class="carousel-item active">
-            <img src="~/css/Resources/forest.jpg" class="d-block w-100" alt="...">
+            <img class="carousel-img" src="~/css/Resources/Background.png" alt="...">
         </div>
         <div class="carousel-item">
-            <img src="~/css/Resources/moon.jpg" class="d-block w-100" alt="...">
+            <img class="carousel-img" src="~/css/Resources/moon.jpg" alt="...">
         </div>
         <div class="carousel-item">
-            <img src="~/css/Resources/road.jpg" class="d-block w-100" alt="...">
+            <img class="carousel-img" src="~/css/Resources/road.jpg" alt="...">
         </div>
     </div>
     <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -47,61 +41,93 @@
                         "Sort By",
                         new { @class = "form-control", style = "width: 190px;" })
 
-
+@foreach (var item in Model.Post)
+{
+<tr>
+    <td>
+        <a href="/Posts/Details?id=7">
+            <img class="post" src=@Url.Content(item.photo) alt="test" />
+        </a>
+    </td>
+    <td>
+        @Html.DisplayName(item.Title)
+    </td>
+    <td>
+        @Html.DisplayName(item.author)
+    </td>
+</tr>
+}
 
 
 @*need to figure out somethings with displaying this on the main page and stuff*@
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Post[0].Title)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Post[0].short_desc)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Post[0].date)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Post[0].author)
-            </th>
-            
-            <th>
-                @Html.DisplayNameFor(model => model.Post[0].photo)
-            </th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in Model.Post)
-        {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Title)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.short_desc)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.date)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.author)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.photo)
-            </td>
+@*<table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Post[0].Title)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Post[0].short_desc)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Post[0].date)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Post[0].author)
+                </th>
 
-            <td>
-                <a asp-page="./Posts/Edit" asp-route-id="@item.ID">Edit</a> |
-                <a asp-page="./Posts/Details" asp-route-id="@item.ID">Details</a> |
-                <a asp-page="./Posts/Delete" asp-route-id="@item.ID">Delete</a>
-                
-            </td>
-        </tr>
-        }
-    </tbody>
-</table>
+                <th>
+                    @Html.DisplayNameFor(model => model.Post[0].photo)
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Title)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.short_desc)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.date)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.author)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.photo)
+                </td>
+
+                <td>
+                    <a asp-page="./Posts/Edit" asp-route-id="@item.ID">Edit</a> |
+                    <a asp-page="./Posts/Details" asp-route-id="@item.ID">Details</a> |
+                    <a asp-page="./Posts/Delete" asp-route-id="@item.ID">Delete</a>
+
+                </td>
+            </tr>
+            }
+        </tbody>
+    </table>*@
+
+<style>
+    .carousel-inner {
+        height: 300px;
+        width: 100%;
+        background-color: white;
+    }
+
+    .carousel-item img {
+        width: 100%;
+        height: 300px;
+    }
+
+    .post {
+        margin: 10px 5px 10px;
+        height: 150px;
+        width: 250px;
+    }
+</style>
 
 
 

@@ -18,6 +18,7 @@ namespace gis_portfolio.Pages.Posts
         {
             _context = context;
         }
+        public IEnumerable<Post> Posts { get; set; }
 
         public IList<Post> Post { get;set; }
 
