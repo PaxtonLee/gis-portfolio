@@ -14,7 +14,16 @@
 
 </div>
 <div>
-    <a asp-page="./Edit" asp-route-id="@Model.Post.ID">Edit</a> |
+    
+    @if (User.Identity.Name == Html.DisplayTextFor(model => model.Post.author))
+        {
+            <td>
+                <a asp-page="./Edit" asp-route-id="@Html.DisplayTextFor(model => model.Post.ID)" >Edit</a> |
+                <a asp-page="./Delete" asp-route-id="@Html.DisplayTextFor(model => model.Post.ID)">Delete</a> |
+            </td>
+        }
+
+
     <a asp-page="/Index">Back to List</a>
 </div>
 

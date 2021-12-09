@@ -8,14 +8,13 @@
     <a asp-page="Posts/Create">Create New Post</a>
 </p>
 
-<!-- <h1>@ViewData["Title"]</h1> -->
 <div class="row">
     <div class="col-sm-6">
         <h1 class="col-sm-4">Profile</h1>
         <p class="col-sm-4">@User.Identity.Name</p>
     </div>
     <div id="pic" class="col-sm-6">
-        <img id="profpic" class="avatar" src="~/css/Resources/road.jpg" />
+        <img id="profpic" class="avatar" src="~/css/Resources/Shield Logo Black.jpg" />
     </div>
 </div>
 
@@ -51,8 +50,8 @@
 
     .avatar {
         /*vertical-align: middle;*/
-        width: 100px;
-        height: 100px;
+        width: 40%;
+        height: 80%;
         border-radius: 50%;
     }
 
@@ -61,9 +60,7 @@
     }
 
     .row {
-        outline-color: black;
-        outline-style: inset;
-        outline-width: thin;
+        
     }
 
     .carousel-inner {
