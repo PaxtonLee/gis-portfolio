@@ -5,59 +5,41 @@
 }
 
 
-<!-- https://getbootstrap.com/docs/4.2/components/carousel/ -->
-<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-    <ol class="carousel-indicators">
-        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-    </ol>
-    <div class="carousel-inner">
-        <div class="carousel-item active">
-            <img class="carousel-img" src="~/css/Resources/Background.png" alt="...">
-        </div>
-        <div class="carousel-item">
-            <img class="carousel-img" src="~/css/Resources/moon.jpg" alt="...">
-        </div>
-        <div class="carousel-item">
-            <img class="carousel-img" src="~/css/Resources/road.jpg" alt="...">
-        </div>
+<div class="row">
+    
+    <div class="column">
+        <img class="collage" src="/css/Resources/Baboquivari.jpg">
     </div>
-    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-    </a>
-    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-    </a>
+    <div class="column">
+        <img class="collage" src="/css/Resources/GrassyLake.jpg">
+    </div>
+
+    <div class="column">
+        <img class="collage" src="/css/Resources/MuleCreek.jpg">
+    </div>
+    <div class="column">
+        <img class="collage" src="/css/Resources/MonteAlban.jpg">
+    </div>
+   
+
 </div>
-
-
-@*This is the drop down box, not sure how to make smaller or put in a specific spot yet, CE*@
-
-@*@Html.DropDownList("Sort by",
-                        new SelectList(Enum.GetValues(typeof(Sort))),
-                        "Sort By",
-                        new { @class = "form-control", style = "width: 190px;" })*@
-
-<ul id="content">
+<div class="main">
+    <ul id="content">
     @foreach (var item in Model.Post)
     {
         int id = item.ID;
         <li class="post">
-            <a href="/Posts/Details?id=@id"  class="pic-link">
-                    <img class="post-img" src=@Url.Content(item.photo) alt="test" /> 
+            <a href="/Posts/Details?id=@id" class="pic-link">
+                <img class="post-img" src=@Url.Content(item.photo) alt="test" />
             </a>
-            <a class="post-title" href="/Posts/Details?id=7" title="@Html.DisplayName(item.Title)"> @Html.DisplayName(item.Title)</a>
-            <p class="author">@Html.DisplayName(item.display_name)</p> 
-             
+            <a class="post-title" href="/Posts/Details?id=@id" title="@Html.DisplayName(item.Title)"> @Html.DisplayName(item.Title)</a>
+            <p class="author">@Html.DisplayName(item.display_name)</p>
+
         </li>
     }
-</ul>
-       
- 
-
+    </ul>
+</div>
+    
 
 
 <style>
@@ -103,9 +85,36 @@
         line-height: 1.71429em;
         margin-bottom: 1.5em;
         list-style-position: inside;
-        margin-top: 0;
+        margin-top: 5px;
         padding: 0;
+        float:left;
     }
+    .main{
+        float:left;
+        display:inline-block;
+        width:100%
+    }
+    .column {
+        float: left;
+        width: 25%;
+        padding: 5px;
+    }
+    .collage{
+        width: 100%;
+    }
+    .row {
+        width: 100%;
+    }
+
+    /* Clear floats after image containers */
+    .row::after {
+        content: "";
+        clear: both;
+        display: table;
+        
+    }
+
+    
 
 </style>
 
