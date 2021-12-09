@@ -30,10 +30,10 @@
             @Html.DisplayFor(model => model.Post.date)
         </dd>
         <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Post.author)
+            @Html.DisplayNameFor(model => model.Post.display_name)
         </dt>
         <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Post.author)
+            @Html.DisplayFor(model => model.Post.display_name)
         </dd>
         <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.Post.long_desc)
@@ -50,6 +50,10 @@
     </dl>
 </div>
 <div>
-    <a asp-page="./Edit" asp-route-id="@Model.Post.ID">Edit</a> |
-    <a asp-page="/Index">Back to List</a>
+    @if (User.Identity.Name == Model.Post.author)
+    {
+        <a asp-page="./Edit" asp-route-id="@Model.Post.ID">Edit</a>
+
+    }
+    |<a asp-page="/Index">Back to List</a>
 </div>

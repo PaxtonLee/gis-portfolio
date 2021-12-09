@@ -15,9 +15,7 @@
                     new { @class = "form-control", style = "width: 190px;" })
 
 
-<p>
-        <a asp-page="Create">Create New</a>
-    </p>
+
 <table class="table">
     <thead>
         <tr>
@@ -31,7 +29,7 @@
                 @Html.DisplayNameFor(model => model.Post[0].date)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Post[0].author)
+                @Html.DisplayNameFor(model => model.Post[0].display_name)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Post[0].long_desc)
@@ -42,28 +40,35 @@
     <tbody>
         @foreach (var item in Model.Post)
         {
-            <tr>
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.short_desc)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.date)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.display_name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.long_desc)
+            </td>
+            <td>
+                <a asp-page="./Details" asp-route-id="@item.ID">Details</a> 
+            </td>
+            @* TODO need to make sure we take the users 'User.Identity.Name' and assign that to the database entry author *@
+            @if (User.Identity.Name == item.author)
+            {
                 <td>
-                    @Html.DisplayFor(modelItem => item.Title)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.short_desc)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.date)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.author)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.long_desc)
-                </td>
-                <td>
-                    <a asp-page="./Edit" asp-route-id="@item.ID">Edit</a> |
-                    <a asp-page="./Details" asp-route-id="@item.ID">Details</a> |
+                    |<a asp-page="./Edit" asp-route-id="@item.ID">Edit</a> |
                     <a asp-page="./Delete" asp-route-id="@item.ID">Delete</a>
                 </td>
-            </tr>
+            }
+
+        </tr>
         }
     </tbody>
 </table>
